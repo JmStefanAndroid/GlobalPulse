@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'">
+  <title>GlobalPulse · 全球消息雷达</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <dialog id="board-dialog">
+    <form id="board-form">
+      <div class="eyebrow">自定义关注板块</div><h2>添加你的关注板块</h2>
+      <p class="muted">按关键词匹配所有已接入来源，支持中英文，建议同时填写。</p>
+      <label>板块名称<input name="name" maxlength="24" placeholder="例如：军事" required></label>
+      <label>关键词<textarea name="keywords" rows="4" placeholder="military, missile, defense, war, 军事, 导弹, 国防, 战争" required></textarea></label>
+      <div class="presets"><button type="button" data-preset="military">＋ 军事</button><button type="button" data-preset="tech">＋ 科技</button><button type="button" data-preset="energy">＋ 能源</button></div>
+      <div class="dialog-actions"><button type="button" id="cancel-board">取消</button><button type="submit" class="primary">创建板块</button></div>
+    </form>
+  </dialog>
+  <script src="./app.js"></script>
+</body>
+</html>
